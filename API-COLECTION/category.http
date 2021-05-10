@@ -1,0 +1,23 @@
+@baseUrl =  http://localhost:3000
+GET  {{baseUrl}}/products
+###
+GET  {{baseUrl}}/categories
+###
+GET  {{baseUrl}}/categories/id=c0e62fa2-b05e-4e1d-b515-1cb8c8bee95a
+###
+POST {{baseUrl}}/categories
+Content-Type: application/json
+
+{
+    "name": "bùi khắc tảo"
+}
+###
+PATCH {{baseUrl}}/categories
+Content-Type: application/json
+
+{
+    "name": "realme Q"
+}
+
+###
+DELETE  {{baseUrl}}/categories/5DMvrts

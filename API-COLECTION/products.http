@@ -1,0 +1,25 @@
+@baseUrl=http://localhost:3000
+@resourceName=products
+GET  {{baseUrl}}/{{resourceName}}
+###
+
+//filter products
+GET {{baseUrl}}/{{resourceName}}/?price_gte=900
+
+###
+GET {{baseUrl}}/{{resourceName}}/?price-lte=900
+###
+// filter theo like
+GET {{baseUrl}}/{{resourceName}}/?name_like=Cotton 
+###
+// phan trang 
+GET {{baseUrl}}/{{resourceName}}/?page=1&_limit=5
+
+###
+// sort tang dan
+GET {{baseUrl}}/{{resourceName}}/?_sort=price&_order=asc
+
+###
+// sort giam dan
+
+GET {{baseUrl}}/{{resourceName}}/?_sort=price&_order=desc
